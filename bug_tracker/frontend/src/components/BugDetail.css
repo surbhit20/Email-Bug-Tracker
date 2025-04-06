@@ -1,0 +1,158 @@
+.bug-detail-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.bug-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.bug-detail-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.bug-detail-meta {
+  display: flex;
+  gap: 10px;
+}
+
+.bug-detail-status,
+.bug-detail-priority {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.status-open {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.status-closed {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.priority-low {
+  background-color: #f1f8e9;
+  color: #558b2f;
+}
+
+.priority-medium {
+  background-color: #fff8e1;
+  color: #ff8f00;
+}
+
+.priority-high {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.bug-detail-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.bug-detail-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.bug-detail-label {
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.bug-detail-value {
+  font-size: 1rem;
+}
+
+.bug-detail-description {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.bug-detail-description h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.bug-detail-description-content {
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: #444;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 4px;
+  border-left: 3px solid #3498db;
+}
+
+.bug-detail-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bug-detail-back-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.bug-detail-back-button:hover {
+  background-color: #2980b9;
+}
+
+.bug-detail-resolve-button {
+  padding: 8px 16px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bug-detail-resolve-button:hover {
+  background-color: #219653;
+}
+
+.bug-detail-resolve-button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2em;
+}
+
+.error {
+  color: #e74c3c;
+} 
