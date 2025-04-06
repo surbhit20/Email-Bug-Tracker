@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import BugDetail from './components/BugDetail';
 import Dashboard from './components/Dashboard';
@@ -13,9 +13,10 @@ function App() {
         <Header />
         <main className="app-content">
           <Routes>
-            <Route path="/" element={<AutoRefreshBugList />} />
+            <Route path="/" element={<Navigate to="/bugs" replace />} />
+            <Route path="/bugs" element={<AutoRefreshBugList />} />
             <Route path="/bugs/:bugId" element={<BugDetail />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/bug_modifications" element={<Dashboard />} />
           </Routes>
         </main>
       </div>

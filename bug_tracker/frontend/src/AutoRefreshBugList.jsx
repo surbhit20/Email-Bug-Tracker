@@ -82,33 +82,45 @@ const AutoRefreshBugList = () => {
         display: 'flex', 
         justifyContent: 'space-between', 
         alignItems: 'center', 
-        marginBottom: '20px',
-        backgroundColor: '#f5f5f5',
-        padding: '10px',
-        borderRadius: '5px'
+        marginBottom: '30px',
+        backgroundColor: 'white',
+        padding: '20px 25px',
+        borderRadius: '12px',
+        boxShadow: '0 6px 16px rgba(0, 0, 0, 0.05)',
+        transition: 'all 0.3s ease'
       }}>
-        <h2>Bug List</h2>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+        <h2 style={{ 
+          fontSize: '1.6rem', 
+          color: '#2c3e50', 
+          fontWeight: '600', 
+          margin: 0 
+        }}>Bug List</h2>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
           <button 
             onClick={handleForceRefresh} 
             style={{
-              padding: '5px 10px',
-              backgroundColor: '#0056b3',
+              padding: '10px 18px',
+              backgroundColor: '#388E3C',
               color: 'white',
               border: 'none',
-              borderRadius: '4px',
-              cursor: 'pointer'
+              borderRadius: '50px',
+              cursor: 'pointer',
+              boxShadow: '0 3px 8px rgba(56, 142, 60, 0.3)',
+              transition: 'all 0.3s ease',
+              fontWeight: '500',
+              letterSpacing: '0.3px'
             }}
           >
             Force Refresh
           </button>
           <div style={{ 
             fontSize: '0.9em', 
-            color: '#333',
-            backgroundColor: '#e0e0e0',
-            padding: '5px 10px',
-            borderRadius: '3px',
-            fontWeight: 'bold'
+            color: '#555',
+            backgroundColor: '#f5f8f5',
+            padding: '10px 16px',
+            borderRadius: '8px',
+            fontWeight: '500',
+            border: '1px solid #e9f0ea'
           }}>
             Last refreshed: {lastRefresh.toLocaleTimeString()}
           </div>
@@ -116,7 +128,17 @@ const AutoRefreshBugList = () => {
       </div>
       
       {bugs.length === 0 ? (
-        <p>No bugs found.</p>
+        <div style={{
+          textAlign: 'center',
+          padding: '50px 20px',
+          backgroundColor: 'white',
+          borderRadius: '10px',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+          fontSize: '1.1rem',
+          color: '#7f8c8d'
+        }}>
+          No bugs found.
+        </div>
       ) : (
         <table className="bug-table">
           <thead>

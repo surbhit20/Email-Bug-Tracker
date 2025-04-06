@@ -12,16 +12,16 @@ const Header = () => {
         
         <nav className="app-nav">
           <Link 
-            to="/" 
-            className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
+            to="/bugs" 
+            className={`nav-link ${location.pathname === '/bugs' ? 'active' : ''}`}
           >
             Bug List
           </Link>
           <Link 
-            to="/dashboard" 
-            className={`nav-link ${location.pathname === '/dashboard' ? 'active' : ''}`}
+            to="/bug_modifications" 
+            className={`nav-link ${location.pathname === '/bug_modifications' ? 'active' : ''}`}
           >
-            Dashboard
+            Bug Modifications
           </Link>
         </nav>
       </div>
